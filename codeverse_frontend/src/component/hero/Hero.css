@@ -1,0 +1,156 @@
+.hero-container {
+    width: 100%;
+    padding-top: 4.2rem;
+}
+.hr-container {
+    width: 100%;
+    padding-top: 7.625rem;
+    padding-bottom: 5.625rem;
+    background-image: url("../../assets/Herobg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+.main-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    color: #020817;
+    font-weight: bold;
+    text-align: center;
+}
+.small-text {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.bottom-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.hero-g-button {
+    background-color: #f26430;
+    padding: 14px 28px;
+    color: #fff;
+    border-radius: 32px;
+    cursor: pointer;
+}
+.hero-g-button:hover {
+    background-color: #E23E14;
+}
+
+.hero-j-button {
+    padding: 14px 28px;
+    border-radius: 32px;
+    border: 1px solid #c7c6c6;
+    cursor: pointer;
+}
+.hero-j-button:hover {
+    background-color: #E5E7EB;
+}
+
+.short-image {
+    position: absolute;
+    z-index: 999;
+    width: 100px;
+}
+
+.left-abs-element {
+    position: absolute;
+    top: 165px;
+    left: 165px;
+}
+
+
+.codeprofile {
+    width: auto;
+    padding: 8px 16px; 
+    background-color: #fe3559;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.codeprofile-cursor-right {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 16px;    
+}
+.codeprofile-cursor-right img {
+    width: 100%;
+}
+
+.right-abs-element {
+    position: absolute;
+    top: 165px;
+    right: 165px;
+}
+
+.codeprofile-cursor-left {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 16px;  
+}
+.codeprofile-cursor-left img {
+    width: 100%;
+}
+
+.right-abs-element-1 {
+    position: absolute;
+    bottom: 95px;
+    right: 355px;
+}
+.left-abs-element-1 {
+    position: absolute;
+    bottom: 95px;
+    left: 288px;
+}
+
+
+@media (max-width: 1024px) {
+    .left-abs-element,
+    .left-abs-element-1,
+    .right-abs-element,
+    .right-abs-element-1 {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .hr-container {
+        padding-top: 3rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 2.4rem;
+    }
+    .main-text {
+        font-size: 2rem;
+        text-align: center;
+        line-height: normal;
+    }
+    .small-text {
+        text-align: center;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .bottom-hero {
+        gap: 12px;
+    }
+    .hero-g-button,
+    .hero-j-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

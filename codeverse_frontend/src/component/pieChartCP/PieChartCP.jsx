@@ -1,0 +1,104 @@
+import React from 'react';
+import Chart from "react-apexcharts";
+
+const PieChartCP = ({ data }) => {
+  const icons = {
+    codeforces: 'https://codolio.com/icons/codeforces.png',
+    codechef: 'https://codolio.com/icons/codechef_light.png',
+    leetcode: 'https://codolio.com/icons/leetcode_light.png',
+    gfg: 'https://codolio.com/icons/gfg.png'
+  }
+  const options = {
+  labels: ["CodeChef", "CodeForces", "GFG", "Leetcode"],
+  colors: ["#00E398", "#FEB010", "#F43747", "#008FFB"],
+  dataLabels: {
+    enabled: false
+  },
+  legend: {
+    position: "bottom"
+  },
+  plotOptions: {
+    pie: {
+      donut: {
+        labels: {
+          show: true,
+          name: {
+            show: true,
+            fontSize: '16px',
+            fontWeight: 'bold',
+            color: '#495057',
+            offsetY: -10
+          },
+          value: {
+            show: true,
+            fontSize: '20px',
+            fontWeight: 'bold',
+            color: '#212529',
+            offsetY: 10,
+            formatter: function (val) {
+              return val;
+            }
+          },
+          total: {
+            show: true,
+            label: 'Total',
+            fontSize: '16px',
+            fontWeight: 'bold',
+            color: '#000',
+            formatter: function (w) {
+              return w.globals.seriesTotals.reduce((a, b) => a + b, 0);
+            }
+          }
+        }
+      }
+    }
+  },
+  responsive: [
+    {
+      breakpoint: 1024,
+      options: {
+        chart: {
+          height: 300,
+        },
+        legend: {
+          position: "bottom"
+        }
+      }
+    },
+    {
+      breakpoint: 640,
+      options: {
+        chart: {
+          height: 250,
+        },
+        legend: {
+          position: "bottom"
+        }
+      }
+    }
+  ]
+};
+
+  const series = [data.codechefCount, data.codeforcesCount, data.gfgCount, data.leetcodeCount];
+
+  return (
+    <div className="w-full flex flex-col items-center gap-5 max-w-md px-4 py-2 mx-auto">
+      <span className="font-bold text-slate-700">Competitive Programming</span>
+      <Chart
+        options={options}
+        series={series}
+        type="donut"
+        width="100%"
+        height="300"
+      />
+      <div className='flex gap-2'>
+        <img src={icons.codeforces} alt="" className="w-7 h-7 object-contain" />
+        <img src={icons.codechef} alt="" className="w-7 h-7 object-contain" />
+        <img src={icons.leetcode} alt="" className="w-7 h-7 object-contain" />
+        <img src={icons.gfg} alt="" className="w-7 h-7 object-contain" />
+      </div>
+    </div>
+  );
+};
+
+export default PieChartCP;

@@ -1,0 +1,118 @@
+.feature-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5.625rem;
+    padding-bottom: 5.625rem;
+    padding-left: 6.625rem;
+    padding-right: 6.625rem;
+}
+.f-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.feature-container .f-header h2 {
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: #252A37;
+    margin-bottom: 16px;
+}
+.feature-container .f-header p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #64748b;
+}
+
+.f-section {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.f-section-child {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #eeeeee;
+}
+.f-section-child .fs-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #FDEDE9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F26430;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.f-section-child .fs-icon i{
+    font-size: 20px;
+}
+.f-section-child h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+.f-section-child p {
+    color: #64748b;
+    text-align: left;
+}
+.f-section-child .fs-icon .fs-svg-icon-1 {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../assets/dashboard-svgrepo-com.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.f-section-child .fs-icon .fs-svg-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../assets/activity-svgrepo-com.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+
+@media (max-width: 1024px) {
+    .feature-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .f-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-container {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .feature-container .f-header h2 {
+        font-size: 26px;
+        line-height: normal;
+        text-align: center;
+    }
+    .feature-container .f-header p {
+        font-size: 15px;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .f-section {
+        grid-template-columns: 1fr;
+    }
+}
